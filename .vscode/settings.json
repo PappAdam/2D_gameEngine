@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "engine.h": "c",
+        "type_traits": "c",
+        "stdbool.h": "c",
+        "sdl_image.h": "c"
+    }
+}
