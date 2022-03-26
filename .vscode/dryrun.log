@@ -1,6 +1,6 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/media/adampapp/2TBHDD/C/2D_gameEngine'
-gcc main.c src/camera.c src/engine.c src/gameObj.c src/hitbox.c src/mouse.c src/renderer.c src/runtime.c -w -lSDL2 -lSDL2_image 
+gcc main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c -w -lSDL2 -lSDL2_image 
 ./a.out
 make: Leaving directory '/media/adampapp/2TBHDD/C/2D_gameEngine'
  

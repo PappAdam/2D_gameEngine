@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Mar 26 18:52:32 2022
+# Make data base, printed on Sat Mar 26 19:43:04 2022
 
 # Variables
 
@@ -19,6 +19,7 @@ DESKTOP_SESSION = pop
 # default
 .SHELLFLAGS := -c
 # environment
+ 
 XDG_SESSION_CLASS = user
 # environment
 SNAP_COMMON = /var/snap/code/common
@@ -261,9 +262,9 @@ VSCODE_PID = 5861
 
 # Directories
 
-# . (device 2049, inode 121241840): 8 files, no impossibilities.
+# . (device 2049, inode 121241840): 9 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -271,7 +272,7 @@ VSCODE_PID = 5861
 
 # Files
 
-all: main.c src/camera.c src/engine.c src/gameObj.c src/hitbox.c src/mouse.c src/renderer.c src/runtime.c
+all: main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c
 #  Command line target.
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
@@ -285,26 +286,32 @@ all: main.c src/camera.c src/engine.c src/gameObj.c src/hitbox.c src/mouse.c src
 # automatic
 # * := 
 # automatic
-# + := main.c src/camera.c src/engine.c src/gameObj.c src/hitbox.c src/mouse.c src/renderer.c src/runtime.c
- 
+# + := main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c
 # automatic
 # | := 
 # automatic
 # < := main.c
 # automatic
-# ^ := main.c src/camera.c src/engine.c src/gameObj.c src/hitbox.c src/mouse.c src/renderer.c src/runtime.c
+# ^ := main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c
 # automatic
-# ? := main.c src/camera.c src/engine.c src/gameObj.c src/hitbox.c src/mouse.c src/renderer.c src/runtime.c
+# ? := main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/11=9%
 #  recipe to execute (from 'makefile', line 2):
-	gcc main.c src/camera.c src/engine.c src/gameObj.c src/hitbox.c src/mouse.c src/renderer.c src/runtime.c -w -lSDL2 -lSDL2_image 
+	gcc main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c -w -lSDL2 -lSDL2_image 
 	./a.out
+
+# Not a target:
+src/engine/engine.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-26 16:25:55.665684792
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-26 18:52:32.65125666
+#  Last modified 2022-03-26 19:41:30.775032868
 #  File has been updated.
 #  Successfully updated.
 
@@ -317,28 +324,21 @@ main.c:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-26 18:52:30.383238536
+#  Last modified 2022-03-26 19:43:00.495674739
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/camera.c:
+src/engine/camera.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-03-20 21:36:58.627200832
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/hitbox.c:
+src/engine/hitbox.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-03-20 19:36:39.077527514
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/gameObj.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-03-25 22:28:51.687779464
 #  File has been updated.
 #  Successfully updated.
 
@@ -351,28 +351,29 @@ src/gameObj.c:
 # Not a target:
 src/runtime.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-26 18:52:03.203012128
+#  Last modified 2022-03-26 19:40:52.27075584
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/renderer.c:
+src/engine/gameObj.c:
 #  Implicit rule search has been done.
+#  Last modified 2022-03-25 22:28:51.687779464
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engine/renderer.c:
+#  Implicit rule search has been done.
+ 
 #  Last modified 2022-03-25 22:27:00.294695629
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/mouse.c:
+src/engine/mouse.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-03-20 21:31:34.692439125
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/engine.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-03-26 16:25:55.665684792
 #  File has been updated.
 #  Successfully updated.
 
@@ -384,12 +385,12 @@ src/engine.c:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 197 B / avg = 9 B
-# current buf: size = 8162 B / used = 197 B / count = 20 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 244 B / avg = 11 B
+# current buf: size = 8162 B / used = 244 B / count = 21 / avg = 11 B
 
-# strcache performance: lookups = 28 / hit rate = 28%
+# strcache performance: lookups = 29 / hit rate = 27%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=1/28=4%
-# Finished Make data base on Sat Mar 26 18:52:32 2022
+# Load=21/8192=0%, Rehash=0, Collisions=1/29=3%
+# Finished Make data base on Sat Mar 26 19:43:04 2022
 
  

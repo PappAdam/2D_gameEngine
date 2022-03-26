@@ -1,5 +1,7 @@
 #pragma once
 #include <stdbool.h>
+#include "mouse.h"
+#include <SDL2/SDL.h>
 
 typedef struct camera
 {
@@ -8,3 +10,5 @@ typedef struct camera
     int speed;
     bool isMoveable;
 } camera;
+
+void moveCam(camera *cam, mouse mouse_, int mW, int mH, float deltaTime);

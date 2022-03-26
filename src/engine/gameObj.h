@@ -16,7 +16,6 @@ typedef struct dGameObj
     float ySpeed;
     bool isJump;
     bool isMove;
-    
 } dinamicGobj;
 
 typedef struct gameObj {
@@ -28,3 +27,5 @@ typedef struct gameObj {
 } gameObj;
 
 gameObj noneGameobj;
+
+gameObj createStaticGameObj(int width, int height, float x, float y);
