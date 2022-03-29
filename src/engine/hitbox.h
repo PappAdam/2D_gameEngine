@@ -1,10 +1,12 @@
 #pragma once
+#include <stdbool.h>
 
-typedef enum colDir {
-    top,
-    left,
-    right,
-    down
+
+typedef struct colDir {
+    bool top;
+    bool bottom;
+    bool left;
+    bool right;
 } collisionDir;
 
 typedef struct hitbox

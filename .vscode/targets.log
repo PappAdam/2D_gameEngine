@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Mar 26 19:43:04 2022
+# Make data base, printed on Mon Mar 28 20:30:25 2022
 
 # Variables
 
@@ -19,7 +19,6 @@ DESKTOP_SESSION = pop
 # default
 .SHELLFLAGS := -c
 # environment
- 
 XDG_SESSION_CLASS = user
 # environment
 SNAP_COMMON = /var/snap/code/common
@@ -48,7 +47,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:43445
+JOURNAL_STREAM = 8:47107
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-pop:/etc/xdg
 # environment
@@ -70,7 +69,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 1357
+MANAGERPID = 1374
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -85,8 +84,10 @@ MAKE_HOST := x86_64-pc-linux-gnu
 PATH = /home/adampapp/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# makefile (from 'makefile', line 1)
+files = main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/runtime.c
 # environment
-SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1606,unix/pop-os:/tmp/.ICE-unix/1606
+SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1651,unix/pop-os:/tmp/.ICE-unix/1651
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -104,7 +105,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 876ee506e0284676a9a8cab13ac591fd
+INVOCATION_ID = 00904f975d91422d9d59441e9fb7ce37
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/91/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -128,7 +129,7 @@ PWD = /media/adampapp/2TBHDD/C/2D_gameEngine
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1553
+SSH_AGENT_PID = 1571
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = pop:GNOME
 # environment
@@ -180,7 +181,7 @@ SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = pop
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9124b738-e53e-49b0-85a6-d06c8450666c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-165a3be2-c3c1-4db4-b57b-1be372696e18.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -232,11 +233,11 @@ SNAP_NAME = code
 # environment
 LC_ALL = C
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/2047b2c5_e229_4fa1_9c15_ec0ead027cd0
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/b0849a6f_8a7d_42a8_a967_7ad1ea5005ee
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.182
+GNOME_TERMINAL_SERVICE = :1.9621
 # default
 SUFFIXES := 
 # environment
@@ -252,9 +253,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 5861
+VSCODE_PID = 60402
 # variable set hash-table stats:
-# Load=121/1024=12%, Rehash=0, Collisions=10/149=7%
+# Load=122/1024=12%, Rehash=0, Collisions=10/152=7%
 
 # Pattern-specific Variable Values
 
@@ -262,9 +263,9 @@ VSCODE_PID = 5861
 
 # Directories
 
-# . (device 2049, inode 121241840): 9 files, no impossibilities.
+# . (device 2049, inode 121110930): 11 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -272,13 +273,14 @@ VSCODE_PID = 5861
 
 # Files
 
-all: main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c
+all: main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/runtime.c
 #  Command line target.
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+ 
 # automatic
 # @ := all
 # automatic
@@ -286,32 +288,32 @@ all: main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/eng
 # automatic
 # * := 
 # automatic
-# + := main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c
+# + := main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/runtime.c
 # automatic
 # | := 
 # automatic
 # < := main.c
 # automatic
-# ^ := main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c
+# ^ := main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/runtime.c
 # automatic
-# ? := main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c
+# ? := main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/runtime.c
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
-#  recipe to execute (from 'makefile', line 2):
-	gcc main.c src/engine/camera.c src/engine/engine.c src/engine/gameObj.c src/engine/hitbox.c src/engine/mouse.c src/engine/renderer.c src/runtime.c -w -lSDL2 -lSDL2_image 
+# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+#  recipe to execute (from 'makefile', line 4):
+	gcc $(files) -w -lSDL2 -lSDL2_image 
 	./a.out
 
 # Not a target:
 src/engine/engine.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-26 16:25:55.665684792
+#  Last modified 2022-03-26 22:21:40.660136838
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-26 19:41:30.775032868
+#  Last modified 2022-03-28 17:03:05.862966288
 #  File has been updated.
 #  Successfully updated.
 
@@ -324,21 +326,21 @@ main.c:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-26 19:43:00.495674739
+#  Last modified 2022-03-27 18:57:11.257730323
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/engine/camera.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-20 21:36:58.627200832
+#  Last modified 2022-03-26 22:21:40.660136838
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/engine/hitbox.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-20 19:36:39.077527514
+#  Last modified 2022-03-28 17:55:55.10094098
 #  File has been updated.
 #  Successfully updated.
 
@@ -351,46 +353,31 @@ src/engine/hitbox.c:
 # Not a target:
 src/runtime.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-26 19:40:52.27075584
+#  Last modified 2022-03-28 17:39:39.173861944
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/engine/gameObj.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-25 22:28:51.687779464
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/engine/renderer.c:
-#  Implicit rule search has been done.
- 
-#  Last modified 2022-03-25 22:27:00.294695629
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/engine/mouse.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-03-20 21:31:34.692439125
+#  Last modified 2022-03-28 15:55:20.123868577
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/32=0%
+# Load=10/1024=1%, Rehash=0, Collisions=0/28=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 21 / storage = 244 B / avg = 11 B
-# current buf: size = 8162 B / used = 244 B / count = 21 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 221 B / avg = 10 B
+# current buf: size = 8162 B / used = 221 B / count = 21 / avg = 10 B
 
 # strcache performance: lookups = 29 / hit rate = 27%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/29=3%
-# Finished Make data base on Sat Mar 26 19:43:04 2022
+# Finished Make data base on Mon Mar 28 20:30:25 2022
 
  

@@ -16,16 +16,22 @@ typedef struct dGameObj
     float ySpeed;
     bool isJump;
     bool isMove;
-} dinamicGobj;
+} dynamicGobj;
 
 typedef struct gameObj {
     hitbox hitbox;
     float x, y;
+    int img_w, img_h;
     behaviour behaviour;
-    dinamicGobj dinamic;
+    dynamicGobj dynamic;
     SDL_Texture* texture;
 } gameObj;
 
 gameObj noneGameobj;
 
-gameObj createStaticGameObj(int width, int height, float x, float y);
+gameObj createStaticGameObj(int imgWidth, int imgHeight, float x, float y, int hitboxW, int hitboxH);
+gameObj createDinamicGameObj(int imgWidth, int imgHeight, float x, float y, int hitboxW, int hitboxH, float speed);
+
+void collisionDet(int msX, int msY, gameObj* obj, gameObj map[msX][msY], int mapPosX, int mapPosY);
+
+void updateGameobjPos(gameObj obj, int msX, int msY, gameObj map[msX][msY], int prevPosX, int prevPosY);
