@@ -14,4 +14,5 @@ typedef struct hitbox
     collisionDir colDir;
     int width;
     int height;
+    float x, y;
 } hitbox;

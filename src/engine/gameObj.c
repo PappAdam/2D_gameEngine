@@ -28,6 +28,8 @@ gameObj createStaticGameObj(int imgWidth, int imgHeight, float x, float y, int h
 
     newHitbox.height = hitboxH;
     newHitbox.width = hitboxW;
+    newHitbox.x = x - (hitboxW - imgWidth)/2/imgWidth;
+    newHitbox.y = y - (hitboxH - imgHeight)/2/imgHeight;
     newGameobj.hitbox = newHitbox;
     newGameobj.behaviour = sttc;
     newGameobj.x = x;
@@ -49,7 +51,27 @@ gameObj createDinamicGameObj(int imgWidth, int imgHeight, float x, float y, int 
     return newGameobj;
 }
 
+void moveGameobj(gameObj* obj, float deltaTime, const float gravCon) {
+    if (obj->hitbox.colDir.bottom == NULL) {
+        obj->dynamic.ySpeed += gravCon;
+        obj->dynamic.direction.y = down;
+    }
+
+    else {
+        obj->dynamic.ySpeed = 0;
+        obj->dynamic.direction.y = noneDirY;
+    }
+
+    float yspeed = obj->dynamic.ySpeed * deltaTime;
+    obj->y += (yspeed < 1)? yspeed : 0.9999f;
+    obj->hitbox.y += (yspeed < 1)? yspeed : 0.9999f;
+
+}
+
 void updateGameobjPos(gameObj obj, int msX, int msY, gameObj map[msX][msY], int prevPosX, int prevPosY) {
     map[prevPosX][prevPosY] = noneGameobj;
-    map[(int)obj.x][(int)obj.y] = obj;
+    int x = (int)obj.x;
+    int y = (int)obj.y;
+
+    map[x][y] = obj;
 }
